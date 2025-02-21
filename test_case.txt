@@ -1,0 +1,38 @@
+|||touch|||echo hhh
+|||echo hhh|||touch
+|||cd|||echo aa
+|||echo /|||cd
+|||echo hello|||ip
+|||ifconfig|||cat|||grep 10
+|||ifconfig|||echo hello
+|||echo hello|||ifconfig
+|||echo 10.13.250.192|||ssh
+|||ssh|||echo 10.13.250.192
+check_input_output_files.c\nexec_cmd2.c\nexec_cmd.c\nft_open.c\nft_putstr_fd.c\nft_read.c\nft_split.c\nft_std_input_ouput.c\nft_strdup.c\nft_strlen.c\nft_substr.c\nget_envp_paths.c\npipe_func2.c\npipe_func.c\npipex.c\npipex.h\nprocess_command.c\nread_from_std_input.c\nread_input_file.c\nread_result_from_pipe.c\nrederect_fd_to_pipe.c\n|||grep a|||grep d
+|||ls /|||grep out
+|||aa|||grep out
+|||ls|||grep out|||aaa
+|||echo "hello"|||grep "he"
+|||echo "world"|||grep "z"
+line1\nline2\nline3|||cat|||grep "line"
+|||echo "apple orange banana"|||tr ' ' '\n'|||sort
+|||echo "test"|||non_existent_command
+|||echo "apple"|||non_existent_command|||sort
+|||echo "hello world"|||tr ' ' '\n'|||awk '{print toupper($1)}'
+|||echo "123 456 789"|||grep "4"|||awk '{print $1 * 2}'
+|||echo "one two three"|||tr ' ' '\n'|||grep "two"|||awk '{print toupper($1)}'|||wc -l
+|||echo -e "cat\nbat\napple"|||sort|||grep "a"|||awk '{print $1}'|||sed 's/cat/caterpillar/'
+|||echo "data"|||grep "data"|||non_existent_command|||sort
+|||echo "data"|||grep "data"|||non_existent_command|||ls /|||sort
+|||echo "123 321 231"|||tr ' ' '\n'|||sort|||awk '{print $1 * 10}'|||sed 's/321/XXX/'|||uniq
+|||seq 1 1000|||awk '{print $1*2}'|||sort|||uniq|||tr ' ' '\n'|||grep -v "3"
+|||echo ""|||grep "hello"
+|||echo "test"|||grep "xyz"
+|||sleep 5|||echo "this will timeout"
+|||echo "hello world"|||sort &|||wc -l
+||| ||| |||
+|||ps|||grep vim|||cat -e
+|||ls /home|||grep e|||grep r|||grep r
+infile=/dev/urandom|||cat|||head -1
+{"name":"John Doe","age":30,"isStudent":false,"skills":["JavaScript","Python","C++"],"address":{"street":"123 Main St","city":"Anytown","state":"CA","zip":"90210"},"projects":[{"name":"Website Redesign","status":"Completed"},{"name":"Mobile App","status":"In Progress"}]}|||jq|||grep -C 2 age
+|||sleep 0|||////ls
